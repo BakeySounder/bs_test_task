@@ -10,8 +10,8 @@ import { Footer } from "./components/footer";
 export default function Home() {
   return (
     <div className="flex flex-column container-fluild min-h-screen">
-      <Header/>
-      <SliderSection/>
+      <Header className="z-10"/>
+      <SliderSection className="mt-[-6rem] pt-24"/>
       <MapSection/>
       <FormSection/>
       <Footer/>

@@ -9,7 +9,8 @@ export default {
   theme: {
     fontFamily: {
       "Helvetica": "Helvetica, Arial, sans-serif",
-      "Gilroy": "Gilroy"
+      "Gilroy": "Gilroy",
+      "Involve": "Involve"
     },
     extend: {
       colors: {

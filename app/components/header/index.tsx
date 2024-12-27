@@ -7,7 +7,7 @@ interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, 
 }
 
 export const Header = (props: HeaderProps) => {
-  return <div className={CN(props.className, "flex", "border-b border-bg_1_50 h-24", "bg-grey")} {...props}>
+  return <div className={CN(props.className, "flex", "border-b border-bg_1_50 h-24" )}>
     <div className={CN("container", "flex", "flex-row", "items-center", "")}>
       <div className={CN("flex", "w-full", "logo", "justify-self-start")}>
         <div className={CN("flex")}>
