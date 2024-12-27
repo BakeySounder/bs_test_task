@@ -1,7 +1,7 @@
 import { CN } from "@/app/utils"
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { Button } from "reactstrap"
-
+import PhoneIcon from "@/public/icons/32/phone.svg"
 interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 
 }
@@ -18,20 +18,25 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </div>
-      <div className={CN("flex", "flex-column", "w-[18%]", "adress", "mr-16", "justify-self-end")}>
+      <div className={CN("md:flex", "hidden", "flex-column", "w-[18%]", "adress", "mr-16", "justify-self-end")}>
         <h6 className="font-Helvetica text-[18px] font-normal text-bg_1_100 mb-[4px] leading-[23.4px]">Адрес офиса:</h6>
         <span className="font-Helvetica text-[16px] font-normal text-bg_1_50 leading-[22.4px]">РБ, г. Минск, ул. Ленина, 1</span>      
       </div>
-      <div className={CN("flex", "flex-column", "w-[30%]", "phone", "mr-16", "justify-self-end")}>
+      <div className={CN("md:flex", "hidden", "flex-column", "w-[30%]", "phone", "mr-16", "justify-self-end")}>
         <h6 className="font-Helvetica text-[18px] font-normal text-bg_1_100 mb-[4px] leading-[23.4px]">+375 99 999 99 99</h6>
         <span className="font-Helvetica text-[16px] font-normal text-bg_1_50 leading-[22.4px] mb-[4px]">пн – пт: с 09:00 до 18:00</span>
         <span className="font-Helvetica text-[16px] font-normal text-bg_1_50 leading-[22.4px]">сб – вс: с 10:00 до 16:00</span>      
       </div>
-      <div className={CN("flex", "w-[30%]", "h-14", "p-0", "btn", "justify-self-end")}>
-        <button className="w-100 h-100 border-2 border-accent_500 bg-transparent">
+      <div className={CN("md:flex", "hidden", "w-[30%]", "h-14", "p-0", "button", "justify-self-end")}>
+        <button className="w-full h-full border-2 border-accent_500 bg-transparent">
           <span className="font-Gilroy text-[20px] font-extrabold text-bg_1_100 leading-[22.4px]">
             Заказать звонок
           </span>
+        </button>
+      </div>
+      <div className={CN("mflex", "md:hidden", "w-[10%]", "h-14", "p-0", "button", "justify-self-end")}>
+        <button className="w-full h-full bg-transparent">
+          <PhoneIcon className = {CN("text-bg_1_100")}></PhoneIcon>
         </button>
       </div>
     </div>
