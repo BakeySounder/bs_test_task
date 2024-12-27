@@ -1,21 +1,29 @@
+@import url("./fonts/gilroy/stylesheet.css");
+@import url("./fonts/involve/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg_1-10: #FBFDFD0D;
+  --bg_1-50: #FBFDFD99;
+  --bg_1-100: #FBFDFD;
+
+  --grey: #84848499;
+
+  --accent-500:#E97550;
+  --accent-300:#F39779;
+  --accent-600:#E05D33;
+
+  --accent_2-50: #1141420D;
+  --accent-2-300:#11414299;
+  --accent-2-600:#114142;
+  --accent-2-700:#063536;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg_1-10);
+  font-family: Helvetica, Arial, sans-serif;
 }

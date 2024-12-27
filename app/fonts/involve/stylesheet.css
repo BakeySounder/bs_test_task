@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Involve';
+  src: url('Involve-MediumOblique.otf') format('opentype'),
+      url('Involve-MediumOblique.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('Involve-Medium.otf') format('opentype'),
+      url('Involve-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
