@@ -9,19 +9,17 @@ export async function POST(request: Request) {
     const comment = data.get("comment")?.toString()!
     let msg = `Поступила заявка на обратную связь\nНомер телефона: ${phone}\nКомментарий:${comment}`
     // msg = encodeURI(msg)
-    axios.post(`https://api.telegram.org/bot${token}/sendMessage`,{
+    const res = await axios.post(`https://api.telegram.org/bot${token}/sendMessage`,{
       chat_id:chatId,
       text:msg,
 
-    }).then(res =>{
-      console.log(res.data);
-      
     })
+    console.log(data);
+    return Response.json({msg:"OK", data:res.data}, {status:201})
   } catch(err){
     console.log(err);
     
     return Response.json({msg:"Err when get form data"}, {status:501})
   }
-  console.log(data);
-  return Response.json({msg:"OK"}, {status:201})
+  
 }
