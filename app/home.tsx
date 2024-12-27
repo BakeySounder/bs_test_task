@@ -1,6 +1,5 @@
 "use client"
-import Image from "next/image";
-import { Button, Col, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
+import { Col, Form, FormGroup, Input, Label, Modal, ModalBody } from "reactstrap";
 import { Header } from "./components/header";
 import { SliderSection } from "./components/slider_section";
 import { MapSection } from "./components/section_map";
@@ -9,7 +8,7 @@ import { Footer } from "./components/footer";
 import { useState } from "react";
 import { CN } from "./utils";
 import { FormSubmit } from "./utils/formSubmit";
-export const Home = ()=>{
+export default function Home(){
   const [isModalOpen, SetIsModalOpen] = useState(false)
   const toggle = () => SetIsModalOpen(!isModalOpen);
   return (
