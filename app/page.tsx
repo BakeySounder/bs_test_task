@@ -9,7 +9,7 @@ import { Footer } from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="flex container-fluild min-h-screen">
+    <div className="flex flex-column container-fluild min-h-screen">
       <Header/>
       <SliderSection/>
       <MapSection/>

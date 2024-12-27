@@ -5,9 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --bg_1-10: #FBFDFD0D;
-  --bg_1-50: #FBFDFD99;
-  --bg_1-100: #FBFDFD;
+  --bg-1-10: #FBFDFD0D;
+  --bg-1-50: #FBFDFD99;
+  --bg-1-100: #FBFDFD;
 
   --grey: #84848499;
 
@@ -15,7 +15,7 @@
   --accent-300:#F39779;
   --accent-600:#E05D33;
 
-  --accent_2-50: #1141420D;
+  --accent-2-50: #1141420D;
   --accent-2-300:#11414299;
   --accent-2-600:#114142;
   --accent-2-700:#063536;
@@ -24,6 +24,6 @@
 
 
 body {
-  background-color: var(--bg_1-10);
-  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--bg-1-100) !important;
+  font-family: Helvetica, Arial, sans-serif !important;
 }
