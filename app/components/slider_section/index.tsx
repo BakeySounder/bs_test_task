@@ -2,7 +2,7 @@ import { CN } from "@/app/utils"
 import UpRight  from "@/public/icons/24/up_right.svg" 
 import { useState } from "react"
 interface SliderSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-
+  onBtnClick: ()=> void
 }
 export const SliderSection = (props: SliderSectionProps) => {
   let [currentSlide, SetCurrentSlide ] = useState(1)
@@ -17,20 +17,20 @@ export const SliderSection = (props: SliderSectionProps) => {
                 Создадим ваш идеальный дом в установленные сроки и с 10-летней гарантией
                 </h1>
                 <span className="font-Helvetica text-[26px] font-normal text-bg_1_100">Без головной боли и отклонений от сметы строительства</span>
-                <button className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
+                <button onClick={props.onBtnClick} className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
               </div>
               <div className={CN("flex", "flex-col", "items-start", currentSlide != 2 && "d-none")}>
-                <h1 className={CN("mb-4", "wmd:-[747px]", "text-[28px] md:text-[64px]font-medium font-Involve text-bg_1_100")}>
+                <h1 className={CN("mb-4", "md:w-[747px]", "text-[28px] md:text-[64px] font-medium font-Involve text-bg_1_100")}>
                 Мы создаем надежные и современные дома для вашего уютного проживания
                 </h1>
                 <span className="font-Helvetica text-[26px] font-normal text-bg_1_100">В своей работе мы применяем современные технологии и специализированное строительное оборудование</span>
-                <button className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
+                <button onClick={props.onBtnClick} className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
               </div>
               <div className={CN("flex", "flex-col", "items-start", currentSlide != 3 && "d-none")}>
                 <h1 className={CN("mb-4 ", "md:w-[747px]", "text-[28px] md:text-[64px] font-medium  font-Involve text-bg_1_100")}>
                 В нашей команде работают квалифицированные сотрудники с опытом работы от 5 лет</h1>
                 <span className="font-Helvetica text-[26px] font-normal text-bg_1_100">Мы оперативно выполняем весь спектр строительных работ</span>
-                <button className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
+                <button onClick={props.onBtnClick} className="w-[231px] h-[52px] font-Gilroy text-xl font-extrabold text-bg_1_100 bg-accent_500 mt-8">Узнать стоимость</button>
               </div>
             </div>
             
@@ -67,7 +67,7 @@ export const SliderSection = (props: SliderSectionProps) => {
           </div>
         </div>
       </div>
-      <div className={CN("flex self-center md:self-end  mt-6 md:mt-0")}>
+      <div className={CN("flex self-center  mt-6 md:mt-12")}>
         <button onClick={()=>SetCurrentSlide(1)} type="button" className={CN("w-3 h-3", "mr-3", "rounded-full", "bg-bg_1_100", currentSlide == 1 && "w-7 h-3 bg-accent_500")}/>
         <button onClick={()=>SetCurrentSlide(2)} type="button" className={CN("w-3 h-3", "mr-3", "rounded-full", "bg-bg_1_100", currentSlide == 2 && "w-7 h-3 bg-accent_500")}/>
         <button onClick={()=>SetCurrentSlide(3)} type="button" className={CN("w-3 h-3", "rounded-full", "bg-bg_1_100", currentSlide == 3 && "w-7 h-3 bg-accent_500")}/>

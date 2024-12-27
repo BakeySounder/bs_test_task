@@ -1,4 +1,5 @@
 import { CN } from "@/app/utils"
+import { FormSubmit } from "@/app/utils/formSubmit"
 import { Button, Col, Form, FormGroup, FormText, Input, Label } from "reactstrap"
 
 interface FormSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,7 +12,7 @@ export const FormSection = (props: FormSectionProps) => {
     <div className={CN("md:w-[660px]", "flex", "flex-col", "ml-5")}>
       <h2 className={CN( "text-[48px] font-extrabold leading-[62.4px] font-Gilroy text-accent_2_700")}>Остались вопросы?</h2>
       <span className={CN( "text-[18px] font-normal leading-[25.2px] font-Helvetica text-accent_2_700 mb-6")}>Заполните форму ниже, и наш специалист свяжется с вами в ближайшее время.</span>
-      <Form>
+      <Form onSubmit={FormSubmit}>
         <FormGroup row>
           <Label for="phone" sm={3} >
             Телефон <span className="text-red-600">*</span>

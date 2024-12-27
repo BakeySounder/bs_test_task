@@ -3,7 +3,7 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { Button } from "reactstrap"
 import PhoneIcon from "@/public/icons/32/phone.svg"
 interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-
+  onBtnClick: ()=> void
 }
 
 export const Header = (props: HeaderProps) => {
@@ -12,7 +12,7 @@ export const Header = (props: HeaderProps) => {
       <div className={CN("flex", "w-full", "logo", "justify-self-start")}>
         <div className={CN("flex")}>
           <img className={CN("w-[64px] h-[64px]")} src="/icons/logo.svg" alt="dots icon"/>
-          <div className={CN("flex", "flex-column")}>
+          <div className={CN("flex", "flex-column self-end")}>
             <span className="font-Helvetica text-[16px] font-normal text-bg_1_100">Строительные решения</span>
             <span className="font-Helvetica text-[12px] font-normal text-bg_1_100">Строительные решения</span>
           </div>
@@ -28,7 +28,7 @@ export const Header = (props: HeaderProps) => {
         <span className="font-Helvetica text-[16px] font-normal text-bg_1_50 leading-[22.4px]">сб – вс: с 10:00 до 16:00</span>      
       </div>
       <div className={CN("md:flex", "hidden", "w-[30%]", "h-14", "p-0", "button", "justify-self-end")}>
-        <button className="w-full h-full border-2 border-accent_500 bg-transparent">
+        <button onClick={props.onBtnClick} className="w-full h-full border-2 border-accent_500 bg-transparent">
           <span className="font-Gilroy text-[20px] font-extrabold text-bg_1_100 leading-[22.4px]">
             Заказать звонок
           </span>
