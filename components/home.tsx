@@ -1,14 +1,15 @@
 "use client"
 import { Col, Form, FormGroup, Input, Label, Modal, ModalBody } from "reactstrap";
-import { Header } from "./components/header";
-import { SliderSection } from "./components/slider_section";
-import { MapSection } from "./components/section_map";
-import { FormSection } from "./components/section_form";
-import { Footer } from "./components/footer";
+import Header  from "../components/header";
+import SliderSection  from "../components/slider_section";
+import MapSection  from "../components/section_map";
+import FormSection  from "../components/section_form";
+import Footer  from "../components/footer";
 import { useState } from "react";
-import { CN } from "./utils";
-import { FormSubmit } from "./utils/formSubmit";
-export default function Home(){
+import { CN } from "../utils";
+import { FormSubmit } from "../utils/formSubmit";
+
+export default function HomePage(){
   const [isModalOpen, SetIsModalOpen] = useState(false)
   const toggle = () => SetIsModalOpen(!isModalOpen);
   return (

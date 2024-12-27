@@ -1,8 +1,9 @@
+"use client"
 // import { YMapLocation } from "@yandex/ymaps3-types/imperative/YMap";
 // import { Placemark, YMaps } from "react-yandex-maps";
 import { useRef } from 'react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import { CN } from '@/app/utils';
+import { CN } from '@/utils';
 // import { YMap, YMapComponentsProvider, YMapDefaultFeaturesLayer, YMapDefaultMarker, YMapDefaultSchemeLayer } from "ymap3-components"
 
 interface MapSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -10,7 +11,7 @@ interface MapSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 // const mapState = { center: [55.76, 37.64], zoom: 10 };
 
-export const MapSection = (porps: MapSectionProps) => {
+export default function MapSection(porps: MapSectionProps) {
   const mapRef = useRef(null)
   console.log("123");
   const defaultState = {

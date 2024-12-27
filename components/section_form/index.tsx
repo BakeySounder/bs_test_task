@@ -1,12 +1,13 @@
-import { CN } from "@/app/utils"
-import { FormSubmit } from "@/app/utils/formSubmit"
+"use client"
+import { CN } from "@/utils"
+import { FormSubmit } from "@/utils/formSubmit"
 import { Button, Col, Form, FormGroup, FormText, Input, Label } from "reactstrap"
 
 interface FormSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 
 }
 
-export const FormSection = (props: FormSectionProps) => {
+export default function FormSection(props: FormSectionProps) {
   return <div className={CN("container", "flex", "flex-col", "md:flex-row", props.className)}>
     <img width={"660px"} height={"428px"} src="/form.jpg" alt="" />
     <div className={CN("md:w-[660px]", "flex", "flex-col", "ml-5")}>

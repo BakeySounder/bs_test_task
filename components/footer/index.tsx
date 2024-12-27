@@ -1,10 +1,11 @@
-import { CN } from "@/app/utils"
+"use client"
+import { CN } from "@/utils"
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 
 }
 
-export const Footer = (props: FooterProps) => {
+export default function Footer(props: FooterProps) {
   return <div className={CN("bg-accent_2_600 pt-16 pb-16")}>
     <div className={CN("container", "flex", "flex-col md:flex-row", "gap-9 md:gap-48 md:justify-start justify-center")}>
       <div>

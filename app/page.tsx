@@ -1,6 +1,7 @@
-import Home from "./home";
+import HomePage from "@/components/home";
+import SliderSection from "@/components/slider_section";
 
-
-export default function Page() {
-  return <Home></Home>
+export default function Home() {
+  
+  return <SliderSection></SliderSection>
 }

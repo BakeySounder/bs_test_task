@@ -1,4 +1,5 @@
-import { CN } from "@/app/utils"
+"use client"
+import { CN } from "@/utils"
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { Button } from "reactstrap"
 import PhoneIcon from "@/public/icons/32/phone.svg"
@@ -6,7 +7,7 @@ interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, 
   onBtnClick: ()=> void
 }
 
-export const Header = (props: HeaderProps) => {
+export default function Header(props: HeaderProps) {
   return <div className={CN(props.className, "flex", "border-b border-bg_1_50 h-24" )}>
     <div className={CN("container", "flex", "flex-row", "items-center", "")}>
       <div className={CN("flex", "w-full", "logo", "justify-self-start")}>

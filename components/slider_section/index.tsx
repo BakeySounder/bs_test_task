@@ -1,10 +1,12 @@
-import { CN } from "@/app/utils"
+"use client"
+import { CN } from "@/utils"
 import UpRight  from "@/public/icons/24/up_right.svg" 
 import { useState } from "react"
+import Link from "next/link"
 interface SliderSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  onBtnClick: ()=> void
+  onBtnClick?: ()=> void
 }
-export const SliderSection = (props: SliderSectionProps) => {
+export default function SliderSection(props: SliderSectionProps) {
   let [currentSlide, SetCurrentSlide ] = useState(1)
   return <div className={CN(props.className,"h-[7 50px] md:h-[1000px]","bg-[url('/slider_section_bg.png')]", "bg-cover",  "flex", "border-b border-bg_1_50", "bg-grey")}>
     <div className={CN("container", "flex", "flex-col", "pt-6 md:pt-36 pb-16")}>
@@ -41,9 +43,12 @@ export const SliderSection = (props: SliderSectionProps) => {
             <div className={CN("w-[276px] md:w-[272px]", "h-[276px] md:h-[272px]", "bg-accent_2_600", "md:p-6 p-4", "flex", "flex-col", "justify-between")}>
               <h5 className={CN("mb-0 font-Gilroy font-extrabold text-xl md:text-[22px] text-bg_1_100")}>Оформление рассрочки по ставке от 15% годовых</h5>
               <div className={CN("flex", "flex-row", "mt-8 md:mt-0")}>
-                <a href="#" className={CN("flex", "flex-row", "mr-1", "leading-5", "text-lg", "text-bg_1_100", "font-normal", "no-underline")}>
+                <Link href="#" className={CN("flex", "flex-row", "mr-1", "leading-5", "text-lg", "text-bg_1_100", "font-normal", "no-underline")}>
                 Подробнее
-                </a> 
+                </Link> 
+                {/* <svg className={CN("text-accent_500")}>
+                  <image className={CN("text-accent_500")} href="./icons/24/up_right.svg"></image>
+                </svg> */}
                 <UpRight className={CN("text-accent_500")}/>            
               </div>
             </div>
@@ -52,15 +57,15 @@ export const SliderSection = (props: SliderSectionProps) => {
             </div>
           </div>
           <div className={CN("flex", "flex-row")}>
-          <div className={CN("w-[272px]", "h-[272px]", "bg-[url('/town.png')]", "bg-cover", "p-6")}>
+            <div className={CN("w-[272px]", "h-[272px]", "bg-[url('/town.png')]", "bg-cover", "p-6")}>
               <h5 className={CN("mb-0 font-Gilroy font-extrabold text-xl md:text-[22px] text-bg_1_100")}>Таунхаусы</h5>
             </div>
             <div className={CN("w-[272px]", "h-[272px]", "bg-accent_2_600", "p-6", "flex", "flex-col", "justify-between")}>
               <h5 className={CN("mb-0 font-Gilroy font-extrabold text-xl md:text-[22px] text-bg_1_100")}>Скидка до 5% при полной предоплате за проект</h5>
               <div className={CN("flex", "flex-row")}>
-                <a href="#" className={CN("flex", "flex-row", "mr-1", "leading-5", "text-lg", "text-bg_1_100", "font-normal", "no-underline")}>
+                <Link href="#" className={CN("flex", "flex-row", "mr-1", "leading-5", "text-lg", "text-bg_1_100", "font-normal", "no-underline")}>
                 Подробнее
-                </a> 
+                </Link> 
                 <UpRight className={CN("text-accent_500")}/>            
               </div>
             </div>
